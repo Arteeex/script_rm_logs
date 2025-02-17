@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Папка с логами
+LOG_DIR="/var/log/myapp"
+
+# Найти и удалить все логи старше 7 дней
+find $LOG_DIR -type f -name "*.log" -mtime +7 -exec rm -f {} \;
+
